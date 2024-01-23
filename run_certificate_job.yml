@@ -1,0 +1,32 @@
+name: Run Certificate Job
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This will run the job every day at midnight UTC. Adjust as needed.
+
+jobs:
+  run_certificate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install gspread
+        pip install opencv-python-headless
+        pip install pandas
+        pip install google-auth-oauthlib
+        pip install google-auth-httplib2
+
+    - name: Run script
+      run: python /path/to/your/script.py  # Replace with the correct path to your script
+      env:
+        SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
