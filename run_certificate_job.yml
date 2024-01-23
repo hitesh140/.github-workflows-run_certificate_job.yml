@@ -1,8 +1,8 @@
-name: run certificate job
+name: Run Certificate Job
 
 on:
   schedule:
-    - cron: '53 14 * * *'  # This will run the job every day at 2:10 PM UTC (7:40 PM IST). Adjust as needed.
+    - cron: '56 14 * * *'  # This will run the job every day at 2:56 PM UTC (8:26 PM IST). Adjust as needed.
 
 jobs:
   run_certificate:
@@ -26,7 +26,7 @@ jobs:
         pip install google-auth-httplib2
 
     - name: Run script
-      script: python myproject.py
+      run: python myproject.py
       env:
         SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
         SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
