@@ -26,7 +26,7 @@ jobs:
         pip install google-auth-httplib2
 
     - name: Run script
-      run: python C:\Users\Dell\Desktop\python 2023\myproject.py  # Replace with the correct path to your script
+      run: python sl_project/blob/main/myproject.py # Replace with the correct path to your script
       env:
         SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
         SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
