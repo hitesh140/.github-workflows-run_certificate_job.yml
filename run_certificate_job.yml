@@ -1,4 +1,4 @@
-name: run certificate job
+name: run_certificate_job
 
 on:
   schedule:
