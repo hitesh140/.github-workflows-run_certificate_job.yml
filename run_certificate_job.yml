@@ -2,7 +2,7 @@ name: run certificate job
 
 on:
   schedule:
-    - cron: '43 14 * * *'  # This will run the job every day at 2:10 PM UTC (7:40 PM IST). Adjust as needed.
+    - cron: '53 14 * * *'  # This will run the job every day at 2:10 PM UTC (7:40 PM IST). Adjust as needed.
 
 jobs:
   run_certificate:
