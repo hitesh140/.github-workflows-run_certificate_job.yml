@@ -5,7 +5,7 @@ on:
     - cron: '0 14 * * *'  # This will run the job every day at 2:00 PM UTC (7:30 PM IST). Adjust as needed.
 
 jobs:
-  run_certificate:
+  run_certificate_job:
     runs-on: ubuntu-latest
 
     steps:
